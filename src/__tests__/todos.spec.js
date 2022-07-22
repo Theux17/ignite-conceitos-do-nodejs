@@ -152,6 +152,9 @@ describe('Todos', () => {
       .patch(`/todos/${todoResponse.body.id}/done`)
       .set('username', userResponse.body.username);
 
+      console.log(response.body)
+      console.log(todoResponse.body)
+
     expect(response.body).toMatchObject({
       ...todoResponse.body,
       done: true
